@@ -1,55 +1,27 @@
-class Rectangle {
-  int?length;
-  int? width;
-  Rectangle({
-    required this.length,
-    required this.width
-});
-  void calculation(){
-   int area=length!*width!;
-   int perimeter=(length!+width!)*2;
-   print("Area: $area");
-   print("Perimeter: $perimeter");
-  }
+// Remove these imports:
+// import 'dart:math';
+// import 'package:assignment3/assignment3.dart' as assignment3;
 
-}
+// Import your custom Rectangle class
+import 'package:assignment3/assignment3.dart';
+
+void main() {
+  print("q1");
+  Rectangle r = Rectangle(width: 4, length: 3);
+  r.calculation();
 
 
-class Employee {
-  String? name;
-  int?salary;
+  print("===============");
+  print("q2");
+  Employee e1= Employee(name: 'jana', salary: 3000);
+  e1.raiseSalary(10);
+  print("===============");
 
-  Employee({
-    required this.name,
-    required this.salary,
-  });
-
-  void raiseSalary(double percent) {
-    double total;
-    total = (salary! + (salary! * (percent / 100))!)!;
-    print(total);
-  }
-}
-
-class Book{
-  String?bookname;
-  int?price;
-
-  int?discount;
-  Book({
-    required this.bookname,
-    required this.price,
-    this.discount,
-
-});
-
-void finalPrice(){
-  if (discount == null) {
-    print (price);
-    return;
-  }
-  print( price! - (price! * discount! / 100));
-}
+  print("q3");
+  Book b1=Book(bookname: 'truelove', price: 300,discount: 20);
+  b1.finalPrice();
+  Book b2=Book(bookname: 'lalaa', price: 200,);
+  b2.finalPrice();
 
 
 }
